@@ -1,0 +1,38 @@
+Započeću sa RDF/JS dijagramom specifikacije modela podataka, na kojem sa nalazi Quad kao njegov glavni element. On sadrži subjekat, predikat, objekat i graf, tipa Term, odnosno neke od klasa koje nasleđuju Term.
+
+Klasa Quad nam je bitna jer se upravo njom prezentuje RDF skup 3 entiteta u formi subjekat-predikat-objekat, tako što se istoimenim atributima Quad objekta 
+dodeljuju instance neke od klasa koje nasleđuju Term, u zavisnosti od 
+konkretnih podataka koji se prezentuju.
+
+Dok nam je ova definicija Quada sveža, prećiću na rezultate skripte na kojoj sam radio, a na kraju ću prikazati kako je napisana u kodu.
+  
+Otvorena su dva dokumenta. Sa leve strane primer RDF-a koji se koristi kao 
+izvor podataka, i sadrži dva resursa koje je potrebno sačuvati u bazi podataka.
+
+Sa desne strane je prikazan način na koji su prethodna dva resursa sačuvana u bazi podataka. Za svaki atribut koji opisuje RDF resurs, pravi se jedan Quad.
+To znači da je za resurs sa 4 atributa potrebno 4 Quada, da bi se taj resurs u potpunosti opisao.
+
+Primetimo da se tipovi atributa Quad-a menjaju u zavisnosti od podataka koje oni prezentuju. Svi rmogući tipovi su prikazani na dijagramu modela podataka.
+
+trebam pokazati sad konkretan primer...
+
+Sada prelazim na skriptu.
+Na početku se nalazve sve biblioteke koje se koriste.
+Najvažniji objekat i biblioteka su Quadsore. Konstrukturu ovog objekta se prosledjuje
+backend- odnosno baza podataka koja implementira AbstractLevel interface.
+Ja sam ovde iskoristio LevelDataBase iz classic-level bioblioteke. 
+Ova baza podataka je perzistentna, jer čuva podatke na hard disku, na zadatoj lokaciji.
+
+Quadstore enkapsuira metode prosleđene baze podataka, omogućavajući da se metodama poput PUT, GET i DELETE, prosleđuje Quad objekat, niz Quad-ova ili stream Quadova. 
+Sledeći parametar konstruktora je dataFactory- bioblioteka koja implementira konkretnu strukturu Quad i ostalih klasa, zadatih dijagramom podataka.
+
+Nakon uspešnog otvaranja Quadsore-a, pristupamo RDF dokumentu koji je izvor podataka.
+Njegov sadržaj se parsira i kao rezultat se dobija Quad stream, koji se unosi u Quadstore. Pozivom get metode bez filtera, zahtevamo celokupan sadržaj
+Quadstora, a rezultat je prethodno prikazan dokument sa desne starane.
+
+U narednom delu koda je instanciran query engine, uz pomoć kojeg se izvršavaju 
+SPARQL zahtevi nad Quadstor-orom. Ovde sam kao i do sada, koristio preporučene bioblioteke, međutim naišao sam na problem koji ću demonstrirati sa najjednostavnijim zahtevom, koji treba da vrati sve Quad-ove iz Quadstora. 
+
+Isprobavao sam razne SPARQL zahteve, i načine ispisa njihovih rezultata, međutim uvek dobijem samo jedan Quad, koji je prvi pronađen da ispunjava SPARQL zahtev, umesto niza svih Quadova koji ga ispunjavaju.
+
+Ovde sam stao jer me zanima vaše mišljenje o do sada urađenom, kao i dodatnim zadtevima koji trebaju da se urade. Do tada svako dobro.
