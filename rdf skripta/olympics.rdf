@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:dbo="http://dbpedia.org/ontology/"
+	xmlns:dbp="http://dbpedia.org/property/"
+	xmlns:walls="http://wallscope.co.uk/ontology/olympics/"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/athlete/ADijiang">
+	<foaf:gender rdf:resource="http://wallscope.co.uk/resource/olympics/gender/M"/>
+	<foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">24</foaf:age>
+	<dbo:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int">180</dbo:height>
+	<dbo:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80</dbo:weight>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/event/BasketballMensBasketball">
+	<rdf:type rdf:resource="http://dbpedia.org/ontology/SportsEvent"/>
+	<rdfs:label xml:lang="en">Basketball Men's Basketball</rdfs:label>
+</rdf:Description>
+
+</rdf:RDF>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/gender/M">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<rdfs:label xml:lang="en">male</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/athlete/ADijiang">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/team/China">
+	<rdf:type rdf:resource="http://dbpedia.org/ontology/SportsTeam"/>
+	<rdfs:label xml:lang="en">China</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/athlete/ADijiang">
+	<dbo:team rdf:resource="http://wallscope.co.uk/resource/olympics/team/China"/>
+	<rdfs:label xml:lang="en">A Dijiang</rdfs:label>
+</rdf:Description>
+-->
+<!-- 
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/NOC/CHN">
+	<dbo:ground rdf:resource="http://wallscope.co.uk/resource/olympics/team/China"/>
+	<rdfs:label xml:lang="en">CHN</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/games/1992/Summer">
+	<rdf:type rdf:resource="http://dbpedia.org/ontology/Olympics"/>
+	<dbp:year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1992</dbp:year>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/city/Barcelona">
+	<rdf:type rdf:resource="http://dbpedia.org/ontology/City"/>
+	<rdfs:label xml:lang="en">Barcelona</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/games/1992/Summer">
+	<dbp:location rdf:resource="http://wallscope.co.uk/resource/olympics/city/Barcelona"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/season/Summer">
+	<rdf:type rdf:resource="http://dbpedia.org/ontology/TimePeriod"/>
+	<rdfs:label xml:lang="en">Summer</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/games/1992/Summer">
+	<walls:season rdf:resource="http://wallscope.co.uk/resource/olympics/season/Summer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/sport/Basketball">
+	<rdf:type rdf:resource="http://dbpedia.org/ontology/Sport"/>
+	<rdfs:label xml:lang="en">Basketball</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/event/BasketballMensBasketball">
+	<rdfs:subClassOf rdf:resource="http://wallscope.co.uk/resource/olympics/sport/Basketball"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wallscope.co.uk/resource/olympics/instance/BasketballMensBasketball/1992Summer/ADijiang">
+	<walls:athlete rdf:resource="http://wallscope.co.uk/resource/olympics/athlete/ADijiang"/>
+	<walls:games rdf:resource="http://wallscope.co.uk/resource/olympics/games/1992/Summer"/>
+	<walls:event rdf:resource="http://wallscope.co.uk/resource/olympics/event/BasketballMensBasketball"/>
+</rdf:Description>
+-->

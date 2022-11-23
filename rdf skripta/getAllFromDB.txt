@@ -1,0 +1,113 @@
+//dokument koji sadrzi ispis svih elemenata sadrzanih u bazi podataka
+[
+  Quad {
+    termType: 'Quad',
+    value: '',
+    subject: NamedNode {
+      termType: 'NamedNode',
+      value: 'http://wallscope.co.uk/resource/olympics/athlete/ADijiang'
+    },
+    predicate: NamedNode {
+      termType: 'NamedNode',
+      value: 'http://dbpedia.org/ontology/height'
+    },
+    object: Literal {
+      termType: 'Literal',
+      value: '180',
+      language: '',
+      datatype: [NamedNode]
+    },
+    graph: DefaultGraph { termType: 'DefaultGraph', value: '' }
+  },
+  Quad {
+    termType: 'Quad',
+    value: '',
+    subject: NamedNode {
+      termType: 'NamedNode',
+      value: 'http://wallscope.co.uk/resource/olympics/athlete/ADijiang'
+    },
+    predicate: NamedNode {
+      termType: 'NamedNode',
+      value: 'http://dbpedia.org/ontology/weight'
+    },
+    object: Literal {
+      termType: 'Literal',
+      value: '80',
+      language: '',
+      datatype: [NamedNode]
+    },
+    graph: DefaultGraph { termType: 'DefaultGraph', value: '' }
+  },
+  Quad {
+    termType: 'Quad',
+    value: '',
+    subject: NamedNode {
+      termType: 'NamedNode',
+      value: 'http://wallscope.co.uk/resource/olympics/athlete/ADijiang'
+    },
+    predicate: NamedNode {
+      termType: 'NamedNode',
+      value: 'http://xmlns.com/foaf/0.1/age'
+    },
+    object: Literal {
+      termType: 'Literal',
+      value: '24',
+      language: '',
+      datatype: [NamedNode]
+    },
+    graph: DefaultGraph { termType: 'DefaultGraph', value: '' }
+  },
+  Quad {
+    termType: 'Quad',
+    value: '',
+    subject: NamedNode {
+      termType: 'NamedNode',
+      value: 'http://wallscope.co.uk/resource/olympics/athlete/ADijiang'
+    },
+    predicate: NamedNode {
+      termType: 'NamedNode',
+      value: 'http://xmlns.com/foaf/0.1/gender'
+    },
+    object: NamedNode {
+      termType: 'NamedNode',
+      value: 'http://wallscope.co.uk/resource/olympics/gender/M'
+    },
+    graph: DefaultGraph { termType: 'DefaultGraph', value: '' }
+  },
+  Quad {
+    termType: 'Quad',
+    value: '',
+    subject: NamedNode {
+      termType: 'NamedNode',
+      value: 'http://wallscope.co.uk/resource/olympics/event/BasketballMensBasketball'
+    },
+    predicate: NamedNode {
+      termType: 'NamedNode',
+      value: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'
+    },
+    object: NamedNode {
+      termType: 'NamedNode',
+      value: 'http://dbpedia.org/ontology/SportsEvent'
+    },
+    graph: DefaultGraph { termType: 'DefaultGraph', value: '' }
+  },
+  Quad {
+    termType: 'Quad',
+    value: '',
+    subject: NamedNode {
+      termType: 'NamedNode',
+      value: 'http://wallscope.co.uk/resource/olympics/event/BasketballMensBasketball'
+    },
+    predicate: NamedNode {
+      termType: 'NamedNode',
+      value: 'http://www.w3.org/2000/01/rdf-schema#label'
+    },
+    object: Literal {
+      termType: 'Literal',
+      value: "Basketball Men's Basketball",
+      language: 'en',
+      datatype: [NamedNode]
+    },
+    graph: DefaultGraph { termType: 'DefaultGraph', value: '' }
+  }
+]

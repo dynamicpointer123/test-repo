@@ -1,0 +1,19 @@
+//dokument koji sadrzi rezultat izvrsavanja sledeceg SPARQL zahteva nad bazom podataka
+//var query = 'SELECT * {?s ?p ?o}';
+NamedNode {
+  termType: 'NamedNode',
+  value: 'http://wallscope.co.uk/resource/olympics/athlete/ADijiang'
+}
+NamedNode {
+  termType: 'NamedNode',
+  value: 'http://dbpedia.org/ontology/height'
+}
+Literal {
+  termType: 'Literal',
+  value: '180',
+  language: '',
+  datatype: NamedNode {
+    termType: 'NamedNode',
+    value: 'http://www.w3.org/2001/XMLSchema#int'
+  }
+}
