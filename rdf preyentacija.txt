@@ -36,3 +36,32 @@ SPARQL zahtevi nad Quadstor-orom. Ovde sam kao i do sada, koristio preporučene 
 Isprobavao sam razne SPARQL zahteve, i načine ispisa njihovih rezultata, međutim uvek dobijem samo jedan Quad, koji je prvi pronađen da ispunjava SPARQL zahtev, umesto niza svih Quadova koji ga ispunjavaju.
 
 Ovde sam stao jer me zanima vaše mišljenje o do sada urađenom, kao i dodatnim zadtevima koji trebaju da se urade. Do tada svako dobro.
+
+------------------------------------------------------------------------------
+
+Uspeo sam da rešim problem ispisa samo jednog Quad-a. Sve je bilo uredu, samo sam loše prikazivao rezultat SPARQL zahteva. Dok sam radio sa rezultatom kao strimom, 
+mislio sam da iteriram kroz njega celog, ali sam ustvari pokušavao da iteriram samo kroz njegov prvi element, pa je izgledalo kao da rezultat vreća samo prvi nađeni Quad koji odgovara zahtevu. Nakon prebacivanja rezultata iz strima u niz, lako sam dobio pristup svim ostalim elementima rezultata.
+
+Osim prethodne izmene, u skriptu sam doda SPARQL parser i generator koji pomažu pri kreiranju složenih SPARQL zahteva. Jedan takav zahtev ću prikazati na sad proširenom RDF dokumentu, izvoru podataka. 
+Ovde je takođe ispis sadržaja, baze podataka. 
+Ova dva dokumenta su ekvivalentna jer prikazuju iste podatke, samo su ti podaci u drugačijem obliku. 
+Primer SPARQL zahteva ću pokazati nad RDF-om, jer je on pregledniji.
+
+Ovaj zahtev će ispisati imena svih atleta na sledeći način.
+Svaka linija unutar vitičastih zagrada prestavlja RDF trojku: subjekat, predikat i objekat. Stavljajući upitnik ispred imena, označavamo da želimo sve vrednosti tog člana trojke. Tako da se u prvoj liniji Quad-ovi filtriraju samo po predikatu, na one kojima je preditak tipa atleta. Tip atleta je zadat kao skraćenica pomoću prefiksa.
+
+Kako položaj elemenata u jednoj liniji definiše na šta se on odnosi, njegovo ime može biti proizvoljno, i ima važnost samo unutar zahteva. Prva linija nam daje određen skup Quad-ova, a u sledećoj liniji koristimo objekte upravo tih Quad-ova kao tražene vrednosti subjekta. Takođe filtriramo preditak na vrednost labele.
+Iz skupa Quad-ova kojeg smo dobili na kraju uzimamo samo vrednosti objekta i njih ispisujemo, bez duplikata.
+
+Sada primer na konkretnim podacima, kako se nalati jedan pogodak.
+Tražimo predikat tipa atleta, a zanima nas vrednost koju taj predikat opisuje.
+Sada tražimo Quadove čiji subjekat, odnosno identifikator ima prethodnu vrednost.
+Pronađena su 4 takva Quad-a. Dodatno filtriramo na predikat tipa labela.
+Iz skupa Quad-ova koji ispunjavaju SPARQL zahtev ispisujemo samo njihove objekte, koji sadrže imena atleta.
+
+Time sam završio sa prezentacijom skripte, i prelazim na pitanja.
+Po prethodno prikazanom sam ispunio tražene funkcionalne zahteve. Pretpostavljam da je potrebno povečati upotrebljivost skripte, dozvoljavajući korisniku da izabere bilo koji RDF file kao izvor podataka, kao i unos novih SPARQL zahteva, za razliku od trebutnog gde je sve definisano unutar skripte. 
+
+Predlažem da trenutnu verziju skripte dokumentujem, i da se oceni kao predmet projekat, a sve potrebene promene koje navedete bude dorada za diplomski. Naravno ovo je samo predlog. Zanima me vaše mišljenje, do tada svako dobro!
+
+
