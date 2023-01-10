@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "name": "quadstoresparql-all-olympics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "QuadstoreClass.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fetch-sparql-endpoint": "^3.1.1"
+  }
+}
